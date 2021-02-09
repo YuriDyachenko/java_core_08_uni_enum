@@ -29,10 +29,10 @@ public class Main {
 
         Obstructive[] barriers = new Obstructive[4];
 
-        barriers[0] = new Wall(Act.RUN, 50);
-        barriers[1] = new Wall(Act.JUMP, 1.0);
-        barriers[2] = new Wall(Act.RUN, 200);
-        barriers[3] = new Wall(Act.JUMP, 2.0);
+        barriers[0] = new Tredline(50);
+        barriers[1] = new Wall(1.0);
+        barriers[2] = new Tredline(200);
+        barriers[3] = new Wall(2.0);
 
         Competition competition = new Competition(members, barriers);
         competition.hold();
