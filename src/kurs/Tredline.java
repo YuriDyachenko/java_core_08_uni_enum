@@ -1,13 +1,13 @@
 package kurs;
 /*
-БЕГОВАЯ ДОРОЖКА, реализует ПРЕПЯТСТВИЕ
+класс БЕГОВАЯ ДОРОЖКА, реализует ПРЕПЯТСТВИЕ
 код с остальными препятствиями почти полностью идентичен, но в задаче сказано
 создать отдельные классы для препятствий
 */
 public class Tredline implements Obstructive {
     private final Feature feature;
 
-    public Tredline(double length) {
+    public Tredline(int length) {
         this.feature = new Feature(Act.RUN, length);
     }
 

@@ -17,11 +17,11 @@ public class Main {
 
         members[0] = new Man("Сергей", new Feature[]{
                 new Feature(Act.RUN, 300),
-                new Feature(Act.JUMP, 2.2)
+                new Feature(Act.JUMP, 2)
             });
         members[1] = new Cat("Барсик", new Feature[]{
                 new Feature(Act.RUN, 100),
-                new Feature(Act.JUMP, 1.5)
+                new Feature(Act.JUMP, 1)
             });
         members[2] = new Robot("c3pO", new Feature[]{
                 new Feature(Act.RUN, 100)
@@ -30,9 +30,9 @@ public class Main {
         Obstructive[] barriers = new Obstructive[4];
 
         barriers[0] = new Tredline(50);
-        barriers[1] = new Wall(1.0);
+        barriers[1] = new Wall(1);
         barriers[2] = new Tredline(200);
-        barriers[3] = new Wall(2.0);
+        barriers[3] = new Wall(2);
 
         Competition competition = new Competition(members, barriers);
         competition.hold();

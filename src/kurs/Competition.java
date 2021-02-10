@@ -1,6 +1,6 @@
 package kurs;
 /*
-СОРЕВНОВАНИЕ
+класс СОРЕВНОВАНИЕ
 отдельный класс, чтобы не дублировать одинаковый большой код в участниках
 провести: все участники в цикле преодолевают все барьеры
 лимит участника: поиск для конкретного участника по заданному действию
@@ -23,7 +23,7 @@ public class Competition {
             for (Obstructive barrier: barriers) {
                 String barrierName = "  " + barrier.toString() + ": ";
                 //если участник и не заявлен, то можно и не посылать его на состязание
-                double limit = memberLimit(member, barrier.getFeature().getAct());
+                int limit = memberLimit(member, barrier.getFeature().getAct());
                 if (limit == -1) {
                     System.out.printf("%s: пропускает\n", barrierName);
                     continue;
@@ -38,7 +38,7 @@ public class Competition {
         }
     }
 
-    public double memberLimit(Participle participle, Act act) {
+    public int memberLimit(Participle participle, Act act) {
         Feature[] abilities = participle.getFeatures();
         for (Feature feature : abilities) {
             if (feature.getAct() == act) {
